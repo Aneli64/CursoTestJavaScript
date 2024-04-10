@@ -7,15 +7,18 @@ describe('Test for Person', () => {
   });
 
   test('should return down', () => {
+    // AAA
+    // Arrange
     person.weight = 45;
-    const imc = person.calcIMCs();
+    // Act
+    const imc = person.calcIMC();
+    // Assert
     expect(imc).toBe('down')
   });
 
   test('should return normal', () => {
     person.weight = 59;
-    const person = new Person('Nicolas', 59, 1.7)
-    const imc = person.calcIMCs();
+    const imc = person.calcIMC();
     expect(imc).toBe('normal')
   });
 })
