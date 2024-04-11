@@ -17,6 +17,7 @@ describe('Test for BooksService', () => {
 
   describe('test for getBooks', () => {
     test('should return a list book', async () => {
+      const fakeBooks = generateManyBook(4);
       mockGetAll.mockResolvedValue(fakeBooks);
       const books = await service.getBooks();
       console.log(books)
